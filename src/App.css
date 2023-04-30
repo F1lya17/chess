@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.board {
+    width: calc(75px * 9);
+    height: calc(75px * 9);
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cell {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+h4 {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cell-img {
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.cell-black {
+    background-color: rgb(202, 82, 82);
+}
+
+.cell-white {
+    background-color: #f8f0c2;
+}
+
+.selected img {
+    transform: scale(1.2);
+}
+
+.selected {
+    background-color: #bbfe04;
+}
+
+.available-cell {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.available-figure {
+    background-color: red;
+}
+
+ol {
+    display: flex;
+    list-style: none;
 }
